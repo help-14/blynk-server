@@ -1,5 +1,5 @@
-FROM openjdk:11-jre
-MAINTAINER Michael Ferguson <mpherg@gmail.com>
+FROM openjdk:8-jre-alpine
+MAINTAINER Help-14 <help-14@hotmail.com>
 
 ENV BLYNK_SERVER_VERSION 0.41.13
 RUN mkdir /blynk
