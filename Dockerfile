@@ -2,6 +2,7 @@ FROM openjdk:8-jre-alpine
 MAINTAINER Help-14 <help-14@hotmail.com>
 
 ENV BLYNK_SERVER_VERSION 0.41.13
+RUN apk --no-cache add curl
 RUN mkdir /blynk
 RUN curl -L https://github.com/blynkkk/blynk-server/releases/download/v${BLYNK_SERVER_VERSION}/server-${BLYNK_SERVER_VERSION}.jar > /blynk/server.jar
 
