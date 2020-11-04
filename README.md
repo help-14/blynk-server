@@ -6,6 +6,33 @@ Runs your own [Blynk Server](https://github.com/blynkkk/blynk-server) in a Docke
 
 ## How To Use It
 
+### Docker compose
+
+```
+version: "3.0"
+services:
+  blynk:
+    image: help14/blynk-server-pi
+    container_name: blynk
+    cap_add:
+      - ALL
+    volumes:
+      - ./blynk:/data
+    ports:
+      - 8080:8080/tcp
+      - 8441:8441/tcp
+      - 9443:9443/tcp
+      - 8080:8080/udp
+      - 8441:8441/udp
+      - 9443:9443/udp
+    restart: unless-stopped
+    #networks:
+    #  myvlan:
+    #    ipv4_address: 192.168.1.21
+```
+
+### Docker command
+
 Easy peasy:
 
 ```sh
