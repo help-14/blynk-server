@@ -9,25 +9,25 @@ Runs your own [Blynk Server](https://github.com/blynkkk/blynk-server) in a Docke
 Easy peasy:
 
 ```sh
-docker run mpherg/blynk-server:latest
+docker run help14/blynk-server-pi:latest
 ```
 
 To forward IP ports from the host to the container, do this:
 
 ```sh
-docker run -p 8080:8080 -p 8441:8441 -p 9443:9443 mpherg/blynk-server:latest
+docker run -p 8080:8080 -p 8441:8441 -p 9443:9443 help14/blynk-server-pi:latest
 ```
 
 To persist data, mount a directory into the container:
 
 ```sh
-docker run -v $(PWD):/data mpherg/blynk-server:latest
+docker run -v $(PWD):/data help14/blynk-server-pi:latest
 ```
 
 To include your own server.properties file, mount it into /config/server.properties
 
 ```sh
-docker run -v $(PWD)/server.properties:/config/server.properties mpherg/blynk-server:latest
+docker run -v $(PWD)/server.properties:/config/server.properties help14/blynk-server-pi:latest
 ```
 
 Or you can use a data volume in another container (check out different data volume techniques [here](https://docs.docker.com/engine/tutorials/dockervolumes/)).
